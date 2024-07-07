@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 
 	"github.com/cloudflare/cloudflare-go"
 	"github.com/joho/godotenv"
@@ -43,7 +44,14 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = godotenv.Load(".env")
+	// Get Current Path
+	executable, err := os.Executable()
+	if err != nil {
+		log.Fatal(err)
+	}
+	exPath := filepath.Dir(executable)
+
+	err = godotenv.Load(fmt.Sprintf("%s/.env", exPath))
 	if err != nil {
 		log.Fatal(err)
 	}
