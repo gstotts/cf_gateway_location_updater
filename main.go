@@ -10,6 +10,7 @@ import (
 	"os"
 
 	"github.com/cloudflare/cloudflare-go"
+	"github.com/joho/godotenv"
 )
 
 type IPResult struct {
@@ -38,6 +39,11 @@ func getMyIP() (string, error) {
 func main() {
 	// Get External IP
 	ip, err := getMyIP()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = godotenv.Load(".env")
 	if err != nil {
 		log.Fatal(err)
 	}
