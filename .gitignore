@@ -25,4 +25,4 @@ go.work.sum
 .env
 
 # build
-cf_gatewa_location_updater
+cf_gateway_location_updater
