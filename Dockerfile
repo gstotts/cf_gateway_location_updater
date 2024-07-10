@@ -29,4 +29,4 @@ RUN mkdir -p /var/log/cf_gateway_location_updater && \
     chmod 777 /var/log/cf_gateway_location_updater/cf_gateway_location_updater.log
 
 # Run cron daemon in the foreground
-CMD ["crond", "-f" "-l", "2"]
+CMD ["crond", "-f","-l", "2"]
