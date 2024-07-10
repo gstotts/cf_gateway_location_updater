@@ -1,4 +1,4 @@
-# cloudflare_gateway_location_updater
+# cf_gateway_location_updater
 
 Simple container build that runs a job to update the Gateway location for your Cloudflare Zero Trust instance.  
 
