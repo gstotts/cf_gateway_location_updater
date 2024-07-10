@@ -29,5 +29,9 @@ COPY .env /usr/local/bin
 # Copy your cron job file into the container
 COPY cronjob /etc/crontabs/root
 
+RUN mkdir -p /var/log/cf_gateway_location && \
+    touch /var/log/cf_gateway_location/cf_gateway_location.log && \
+    chmod 777 /var/log/cf_gateway_location/cf_gateway_location.log
+
 # Run cron daemon in the foreground
 CMD ["crond", "-f"]

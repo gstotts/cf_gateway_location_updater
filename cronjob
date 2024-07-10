@@ -1,1 +1,1 @@
-45 * * * * /usr/local/bin/cf_gateway_location
+0 * * * * /usr/local/bin/cf_gateway_location >> /var/log/cf_gateway_location.log 2>&1
