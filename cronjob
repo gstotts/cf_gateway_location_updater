@@ -1,1 +1,1 @@
-* * * * * /usr/local/bin/cf_gateway_location_updater > /dev/stdout 2>&1
+0 * * * * /usr/local/bin/cf_gateway_location_updater > /dev/stdout 2>&1
